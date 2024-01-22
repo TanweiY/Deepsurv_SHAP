@@ -1,2 +1,2 @@
 # Deepsurv_SHAP
-This project first used Deepsurv to train a deep learning model based on epigenome-wide DNA methylaiton data, and then use SHAP to rank the importance of input features.
+This project first used Deepsurv to train a multimodal deep learning model based on both clinical variables and epigenome-wide DNA methylation data. The clinical variables including age, sex, and TNM stage were first fit by a Cox proportional hazard model, and then the prognostic index based on the clinical variables (PIags) for each patient was constructed. Next, the PIags was integrated into the loss function and training process of the Deepsurv. Lastly, SHAP was used to rank the importance of the input of Deepsurv, to find relatively important CpG sites. 
